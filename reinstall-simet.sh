@@ -67,22 +67,9 @@ echo "[10/16] Garantindo expect..."
 apt-get install -y expect
 
 ### 13. Execução automatizada do instalador
-echo "[11/16] Executando instalador..."
+echo "[11/16] Executando instalador (modo automático)..."
 
-expect <<EOF
-set timeout 300
-spawn ./m1.run
-
-expect "INEP code:"
-send "$INEP\r"
-
-expect {
-  "Installing for School*" { send "yes\r" }
-  timeout { send "yes\r" }
-}
-
-expect eof
-EOF
+printf "%s\n%s\n" "$INEP" "yes" | /tmp/m1.run
 
 ### 14. Corrigir pacotes quebrados
 echo "[12/16] Corrigindo dpkg..."
