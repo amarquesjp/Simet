@@ -2,7 +2,7 @@
 set -euo pipefail
 
 echo "================================================="
-echo "   SIMET EDUCAÇÃO CONECTADA - INSTALAÇÃO LIMPA   "
+echo "   SIMET APRENDER CONCECTADO - INSTALAÇÃO LIMPA   "
 echo "================================================="
 
 ### 1. Detectar INEP
